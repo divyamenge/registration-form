@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRATION FORM</title>
+<style>
+body { 
+    background-color: #e8f0fe; 
+    font-family: Arial, sans-serif; 
+}
+ 
+form {
+    width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border: 2px solid #4a90e2;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /* Transition for form */
+    transition: all 0.4s ease-in-out;
+}
+
+/* Transform on form hover */
+form:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Pseudo-class */
+h1:hover {
+    color: #4a90e2;
+    transform: scale(1.05);
+}
+
+label {
+    color: #34495e;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+input {
+    width: 95%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    /* Transition */
+    transition: all 0.3s ease-in-out;
+}
+
+/* 1. :focus pseudo-class with transform */
+input:focus {
+    border: 2px solid #4a90e2;
+    outline: none;
+    transform: scale(1.03);
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.5);
+    background-color: #f0f7ff;
+}
+
+/* 2. :valid and :invalid pseudo-class */
+input:valid {
+    border-left: 4px solid #2ecc71;
+}
+
+input:invalid:focus {
+    border-left: 4px solid #e74c3c;
+}
+
+/* 3. :nth-child pseudo-class */
+label:nth-of-type(odd) {
+    color: #2c3e50;
+}
+label:nth-of-type(even) {
+    color: #4a90e2;
+}
+
+button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 30px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    /* Transition + Transform setup */
+    transition: all 0.3s ease;
+}
+
+/* 4. :hover with transform */
+button:hover {
+    background-color: #2563eb;
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+}
+
+/* 5. :active pseudo-class */
+button:active {
+    transform: scale(0.95);
+    background-color: #1e40af;
+}
+
+/* 6. :first-child and :last-child */
+form label:first-of-type {
+    letter-spacing: 1px;
+}
+
+</style>
+</head>
+<body>
+    <form>
+        <h1>Registration Form</h1>
+
+        <label>Employee Name:</label>
+        <input type="text" name="name" id="name" required><br><br>
+        <label>Employee id:</label>
+        <input type="number" name="id" id="id" required><br><br>
+        <label> Email:</label>
+        <input type="email" name="email" id="email" required><br><br>
+        <label> Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br><br>
+
+        <label>Phone number:</label>
+        <input type="tel" id="phum" name="pnum" required><br><br>
+
+        <label> Address:</label>
+        <input type="text" id="Address" name="address" required><br><br>
+
+        <button>Login</button>
+    </form>   
+</body>
+</html>
